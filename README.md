@@ -32,6 +32,13 @@ Inference:  your question   ->  local LLM  ->  predict_relation tool  ->  traine
                                     +------- plain-language answer <-----------+  
 ```
 
+For more detail see Figure:
+
+![KEGG Agent Architecture](kegg_agent_architecture.png)
+
+
+
+
 The LLM handles language understanding and explanation; the trained model handles the actual prediction.
 
 ## Requirements
