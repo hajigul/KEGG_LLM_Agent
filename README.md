@@ -9,9 +9,9 @@ No OpenAI key required. Everything runs locally via [Ollama](https://ollama.com)
 KEGG50k is a biomedical knowledge graph made of triplets in the form `head  relation  tail`, for example:
 
 ```
-D01920    DRUG_TARGET_GENE    HSA:495
-H00787    DISEASE_PATHWAY     hsa04080
-N00060    NETWORK_GENE        HSA:23401
+D01920    DRUG_TARGET_GENE    HSA:495  
+H00787    DISEASE_PATHWAY     hsa04080  
+N00060    NETWORK_GENE        HSA:23401  
 ```
 
 This project tackles **relation prediction** (also called drug-relation discovery): given a head entity and a tail entity, predict the most likely relation(s) between them, with confidence scores.
@@ -26,10 +26,10 @@ There are two components:
 The system has two phases. You train the model once; afterwards the agent loads the saved model and answers questions.
 
 ```
-Training:   triplet files  ->  build id mappings  ->  train model  ->  saved artifacts
-Inference:  your question   ->  local LLM  ->  predict_relation tool  ->  trained model
-                                    ^                                          |
-                                    +------- plain-language answer <-----------+
+Training:   triplet files  ->  build id mappings  ->  train model  ->  saved artifacts  
+Inference:  your question   ->  local LLM  ->  predict_relation tool  ->  trained model  
+                                    ^                                          |  
+                                    +------- plain-language answer <-----------+  
 ```
 
 The LLM handles language understanding and explanation; the trained model handles the actual prediction.
